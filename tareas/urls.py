@@ -20,5 +20,5 @@ from todo import views
 
 
 urlpatterns = [
-    path("", include ("todo.urls"))
+    path("", include('todo.urls')),
 ]

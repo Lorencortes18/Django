@@ -1,7 +1,6 @@
 from django.shortcuts import redirect, render
-
-from todo.forms import TareaForm
 from .models import Tarea
+from .forms import TareaForm
 # Create your views here.
 def home (request):
     tareas=Tarea.objects.all()
@@ -17,7 +16,7 @@ def agregar(request):
     else:
         form = TareaForm()
     context= {'form': form}
-    return render(request, 'todo/agregar.html', context)
+    return render(request, 'todo/agregar.html',context)
 
 def eliminar(request,tarea_id):
     tarea=Tarea.objects.get(id=tarea_id)
